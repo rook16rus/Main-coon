@@ -11,6 +11,7 @@ body {
   line-height: 1.4;
   color: #fff;
   background-color: $lightBlack;
+  overflow: hidden;
 }
 
 .container {
@@ -22,8 +23,11 @@ body {
     padding: 0 29px;
     width: 710px;
   }
-  
 
+  @media (min-width: $desktop-width) {
+    padding: 0 60px;
+    width: 1184px;
+  }
 }
 
 .visually-hidden {
@@ -74,7 +78,16 @@ body {
     padding: 28px 0 32px;
   }
 
+  @media (min-width: $desktop-width) {
+    padding: 47px 0 114px;
+  }
+}
 
+.header__inner {
+  position: relative;
+  @media (min-width: $desktop-width) {
+    padding-left: 111px;
+  }
 }
 
 .logo {
@@ -87,6 +100,10 @@ body {
 
   @media (min-width: $tablet-width) {
     margin-bottom: 94px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 114px;
   }
 }
 
@@ -127,6 +144,10 @@ body {
   @media (min-width: $tablet-width) {
     margin-bottom: 57px;
   }
+  
+  @media (min-width: $desktop-width) {
+    margin-bottom: 50px;
+  }
 }
 
 .header__button-more {
@@ -135,6 +156,10 @@ body {
   @media (min-width: $tablet-width) {
     font-size: 14px;
     margin-bottom: 57px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 50px;
   }
 }
 
@@ -148,7 +173,10 @@ body {
     top: 62px;
   }
 
-
+  @media (min-width: $desktop-width) {
+    top: -0;
+    right: -49px;
+  }
 }
 
 .social-list {
@@ -163,6 +191,32 @@ body {
   }
 }
 
+.header__social-list {
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    position: absolute;
+    left: -15px;
+
+    &::before {
+      content: "";
+
+      width: 1px;
+      height: 77px;
+
+      position: absolute;
+      top: -109px;
+      left: 5px;
+      background-color: #fff;
+    opacity: 0.6;
+    }
+  }
+}
+
 .social-list__item {
   margin-right: 11px;
+
+  @media (min-width: $desktop-width) {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
 }
