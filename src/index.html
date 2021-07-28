@@ -69,7 +69,15 @@
             </ul>
             <div class="pets__pets-slider pets-slider">
                 <picture class="pets-slider__photo">
-                    <img src="images/cat-catalog.jpg" width="234" height="248" alt="Фото кота">
+                    <source media="(min-width: 1366px)" srcset="images/cat-catalog-desktop.png">
+                    <source media="(min-width: 768px)" srcset="images/cat-catalog-tablet.png, images/cat-catalog-desktop.png 2x">
+                    <img src="images/cat-catalog.jpg" alt="Фото кота">
+                </picture>
+                <picture class="pets-slider__photo--bg pets-slider__photo--left">
+                    <img src="images/cat-catalog-3.png" alt="Фото кота">
+                </picture>
+                <picture class="pets-slider__photo--bg pets-slider__photo--right">
+                    <img src="images/cat-catalog-2.png" alt="Фото кота">
                 </picture>
                 <button class="pets-slider__button pets-slider__button--left">
                     <svg width="15" height="31" viewBox="0 0 15 31" fill="none" xmlns="http://www.w3.org/2000/svg">

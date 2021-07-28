@@ -71,6 +71,10 @@ body {
   font-size: 14px;
   line-height: 1.4;
   color: #A07B50;
+  
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+  }
 }
 
 .header {
@@ -82,7 +86,7 @@ body {
 
   @media (min-width: $tablet-width) {
     text-align: left;
-    padding: 28px 0 32px;
+    padding: 28px 0 25px;
   }
 
   @media (min-width: $desktop-width) {
@@ -227,14 +231,27 @@ body {
 .pets {
   padding: 60px 0;
   text-align: center;
+  
+  @media (min-width: $tablet-width) {
+    padding: 100px 0 91px;
+  }
 }
 
 .pets__title {
   margin: 0 0 35px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 23px;
+  }
 }
 
 .pets__description {
   margin: 0 0 40px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 522px;
+    margin: 0 auto 40px;
+  }
 }
 
 .pets-list {
@@ -256,6 +273,10 @@ body {
   opacity: 0.2;
   cursor: pointer;
 
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+  }
+
   &:hover {
     opacity: 1;
   }
@@ -267,6 +288,10 @@ body {
 
 .pets__pets-list {
   margin: 0 0 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 15px;
+  }
 }
 
 .pets__pets-slider {
@@ -277,6 +302,31 @@ body {
   position: relative;
   overflow: hidden;
 }
+
+.pets-slider__photo {
+  position: relative;
+  z-index: 3;
+
+  &--bg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @media (max-width: $mobile-width-only) {
+      display: none;
+    }
+  }
+
+  &--left {
+    left: 36px;
+  }
+
+  &--right {
+    right: 67px;
+  }
+}
+
+
 
 .pets-slider__button {
   position: absolute;
