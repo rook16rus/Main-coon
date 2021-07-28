@@ -11,7 +11,6 @@ body {
   line-height: 1.4;
   color: #fff;
   background-color: $lightBlack;
-  overflow: hidden;
 }
 
 .container {
@@ -67,11 +66,19 @@ body {
   text-align: center;
 }
 
+.section-description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #A07B50;
+}
+
 .header {
   position: relative;
   text-align: center;
   padding: 27px 0 256px;
   background-color: $black;
+  overflow: hidden;
 
   @media (min-width: $tablet-width) {
     text-align: left;
@@ -136,10 +143,6 @@ body {
 
 .header__description {
   margin: 0 0 40px;
-
-  font-weight: 400;
-  line-height: 1.4;
-  color: #A07B50;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 57px;
@@ -219,4 +222,86 @@ body {
     margin-right: 0;
     margin-bottom: 15px;
   }
+}
+
+.pets {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.pets__title {
+  margin: 0 0 35px;
+}
+
+.pets__description {
+  margin: 0 0 40px;
+}
+
+.pets-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.pets-list__item {
+  margin-right: 45px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: normal;
+  opacity: 0.2;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.pets__pets-list {
+  margin: 0 0 40px;
+}
+
+.pets__pets-slider {
+  margin: 0 0 45px;
+}
+
+.pets-slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.pets-slider__button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+
+  padding: 0;
+
+  background: none;
+  border: 0;
+
+
+  &--left {
+    left: 0;
+    padding-left: 5px;
+    transform: rotate(180deg);
+  }
+
+  &--right {
+    right: 0;
+    padding-left: 5px;
+  }
+}
+
+.pets-slider__button svg {
+  display: block;
 }
