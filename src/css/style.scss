@@ -304,7 +304,9 @@ body {
 
 .pets__pets-slider {
   margin: 0 0 12px;
-  padding-left: 72px;
+  @media (min-width: $desktop-width) {
+    padding-left: 72px;
+  }
 }
 
 .pets-slider {
