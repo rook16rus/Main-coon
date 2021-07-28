@@ -235,6 +235,10 @@ body {
   @media (min-width: $tablet-width) {
     padding: 100px 0 91px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding: 223px 0 83px;
+  }
 }
 
 .pets__title {
@@ -292,28 +296,43 @@ body {
   @media (min-width: $tablet-width) {
     margin-bottom: 15px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 40px;
+  }
 }
 
 .pets__pets-slider {
-  margin: 0 0 45px;
+  margin: 0 0 12px;
+  padding-left: 72px;
 }
 
 .pets-slider {
   position: relative;
-  overflow: hidden;
 }
 
 .pets-slider__photo {
   position: relative;
   z-index: 3;
+  display: inline-block;
+  text-align: left;
+
+  margin-right: 34px;
+  margin-bottom: 19px;
 
   &--bg {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 2;
 
     @media (max-width: $mobile-width-only) {
       display: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      position: static;
+      transform: none;
     }
   }
 
@@ -327,6 +346,18 @@ body {
 }
 
 
+.cat-gallery {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 552px;
+    margin-right: -34px;
+
+  }
+}
 
 .pets-slider__button {
   position: absolute;
@@ -338,6 +369,10 @@ body {
 
   background: none;
   border: 0;
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 
 
   &--left {
