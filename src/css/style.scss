@@ -64,6 +64,10 @@ body {
   font-size: 28px;
   line-height: normal;
   text-align: center;
+  
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+  }
 }
 
 .section-description {
@@ -578,5 +582,120 @@ body {
 
   @media (min-width: $desktop-width) {
     min-height: 700px;
+  }
+}
+
+.features {
+  padding: 60px 0;
+  text-align: center;
+  background-color: $black;
+  
+  @media (min-width: $tablet-width) {
+    padding: 84px 0 100px;
+  }
+}
+
+.features__title {
+  margin: 0 0 35px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 23px;
+  }
+}
+
+.features__description {
+  margin: 0 0 40px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 auto 58px;
+    max-width: 450px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 47px;
+    max-width: 735px;
+  }
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 -30px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: -42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    margin-right: -28px;
+  }
+}
+
+.features-list__item {
+  display: flex;
+
+  min-height: 248px;
+  padding: 15px;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  background-color: $lightBlack;
+  
+  &:hover .features-list__inner {
+    background-color: $lightBrown;
+  }
+
+  &--med .features-list__inner {
+    background: url("../images/features-1.svg") no-repeat center top 40px;
+
+    @media (min-width: $tablet-width) {
+      background-size: 97px;
+    }
+  }
+
+  &--cons .features-list__inner {
+    background: url("../images/features-2.svg") no-repeat center top 48px;
+
+    @media (min-width: $tablet-width) {
+      background-size: 107px;
+    }
+  }
+
+  &--feed .features-list__inner {
+    background: url("../images/features-3.svg") no-repeat center top 40px;
+
+    @media (min-width: $tablet-width) {
+      background-size: 70px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    max-width: 360px;
+    min-height: 306px;
+    padding: 17px 20px;
+    margin: 0 auto 42px;
+
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 28px 42px 0;
+  }
+}
+
+.features-list__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  padding: 30px;
+
+  @media (min-width: $tablet-width) {
+    padding: 40px;
   }
 }
