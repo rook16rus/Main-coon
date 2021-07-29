@@ -392,3 +392,48 @@ body {
 .pets-slider__button svg {
   display: block;
 }
+
+.breed-features {
+  padding: 0 0 60px;
+  text-align: center;
+}
+
+.breed-features__title {
+  margin: 0 0 35px;
+}
+
+.breed-features__description {
+  margin: 0 0 30px;
+}
+
+.breed-features__img {
+  margin: 0 0 40px;
+  display: inline-block;
+}
+
+.breed-features-list {
+  margin: 0 0 -30px;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+
+.breed-features-list__item {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: flex-start;
+
+  &::before {
+    content: "";
+
+    width: 8px;
+    height: 8px;
+    flex-shrink: 0;
+    background-color: $lightBrown;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: 5px;
+
+    line-height: inherit;
+  }
+}
