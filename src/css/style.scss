@@ -396,19 +396,40 @@ body {
 .breed-features {
   padding: 0 0 60px;
   text-align: center;
+  
+  @media (min-width: $tablet-width) {
+    padding: 0 0 73px;
+  }
 }
 
 .breed-features__title {
   margin: 0 0 35px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 23px;
+  }
 }
 
 .breed-features__description {
   margin: 0 0 30px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 450px;
+    margin: 0 auto 51px;
+  }
+}
+
+.breed-features__wrapper {
+  position: relative;
 }
 
 .breed-features__img {
   margin: 0 0 40px;
   display: inline-block;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .breed-features-list {
@@ -435,5 +456,64 @@ body {
     margin-top: 5px;
 
     line-height: inherit;
+  }
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    line-height: 1.5;
+
+    &:nth-child(1) {
+      max-width: 170px;
+      left: 15px;
+      top: 116px;
+      flex-direction: row-reverse;
+      text-align: right;
+
+      &:before {
+        margin: 0 0 0 15px;
+      }
+    }
+
+    &:nth-child(2) {
+      max-width: 150px;
+      right: 5px;
+      top: 189px;
+
+      &:before {
+        margin: 0 13px 0 0;
+      }
+    }
+
+    &:nth-child(3) {
+      max-width: 122px;
+      right: 46px;
+      bottom: 60px;
+
+      &:before {
+        margin: 0 11px 0 0;
+      }
+    }
+
+    &:nth-child(4) {
+      max-width: 152px;
+      left: 5px;
+      bottom: 95px;
+      flex-direction: row-reverse;
+      text-align: right;
+
+      &:before {
+        margin: 0 0 0 11px;
+      }
+    }
+  }
+}
+
+.breed-features__list {
+  @media (min-width: $tablet-width) {
+    min-height: 470px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
   }
 }
