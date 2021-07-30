@@ -709,10 +709,16 @@ body {
   @media (min-width: $tablet-width) {
     padding: 90px 0 105px;
   }
+
+
 }
 
 .cat-care__title {
   margin: 0 0 40px;
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 48px;
+  }
 }
 
 .care-list {
@@ -722,6 +728,14 @@ body {
 
   @media (min-width: $tablet-width) {
     margin-bottom: -25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+
+
+    margin: 0 -41px -43px 0
   }
 }
 
@@ -735,6 +749,10 @@ body {
     max-width: 558px;
     min-height: 168px;
     margin: 0 auto 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 41px 43px 0;
   }
 }
 
