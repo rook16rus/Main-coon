@@ -699,3 +699,51 @@ body {
     padding: 40px;
   }
 }
+
+.cat-care {
+  padding: 60px 0;
+  background: url("../images/cat-care.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.cat-care__title {
+  margin: 0 0 40px;
+}
+
+.care-list {
+  list-style: none;
+  margin: 0 0 -30px;
+  padding: 0;
+}
+
+.care-list__item {
+  display: flex;
+
+  margin-bottom: 30px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.care-list__item-inner {
+  padding: 25px 5px 25px 25px;
+}
+
+.care-list__item-title {
+  margin: 0 0 15px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: normal;
+  color: $lightBrown;
+}
+
+.care-list__item-text {
+  margin: 0;
+}
+
+.care-list__item-button {
+  width: 46px;
+  flex-shrink: 0;
+  border: 0;
+  outline: none;
+  background-color: $lightBrown;
+}
