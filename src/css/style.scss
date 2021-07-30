@@ -318,14 +318,15 @@ body {
 }
 
 .pets-slider__photo {
-  position: relative;
-  z-index: 3;
-  display: inline-block;
-  text-align: left;
+  @media (min-width: $tablet-width) {
+    position: relative;
+    z-index: 3;
+    display: inline-block;
+    text-align: left;
 
-  margin-right: 34px;
-  margin-bottom: 19px;
-
+    margin-right: 34px;
+    margin-bottom: 19px;
+  }
   &--bg {
     position: absolute;
     top: 50%;
@@ -704,6 +705,10 @@ body {
   padding: 60px 0;
   background: url("../images/cat-care.jpg") no-repeat center;
   background-size: cover;
+  
+  @media (min-width: $tablet-width) {
+    padding: 90px 0 105px;
+  }
 }
 
 .cat-care__title {
@@ -714,6 +719,10 @@ body {
   list-style: none;
   margin: 0 0 -30px;
   padding: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: -25px;
+  }
 }
 
 .care-list__item {
@@ -721,10 +730,20 @@ body {
 
   margin-bottom: 30px;
   background-color: rgba(0, 0, 0, 0.3);
+
+  @media (min-width: $tablet-width) {
+    max-width: 558px;
+    min-height: 168px;
+    margin: 0 auto 25px;
+  }
 }
 
 .care-list__item-inner {
   padding: 25px 5px 25px 25px;
+
+  @media (min-width: $tablet-width) {
+    padding: 35px 55px 20px 50px;
+  }
 }
 
 .care-list__item-title {
@@ -746,4 +765,14 @@ body {
   border: 0;
   outline: none;
   background-color: $lightBrown;
+
+  @media (min-width: $tablet-width) {
+    width: 60px;
+  }
+}
+
+.care-list__item-button svg {
+  @media (min-width: $tablet-width) {
+
+  }
 }
