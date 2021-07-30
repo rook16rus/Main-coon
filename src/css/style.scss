@@ -191,18 +191,21 @@ body {
 }
 
 .social-list {
-  display: none;
-
   margin: 0;
   padding: 0;
   list-style: none;
 
+  display: flex;
+
+  }
+
+.header__social-list {
+  display: none;
+
   @media (min-width: $tablet-width) {
     display: flex;
   }
-}
 
-.header__social-list {
   @media (min-width: $desktop-width) {
     flex-direction: column;
     position: absolute;
@@ -789,8 +792,73 @@ body {
   }
 }
 
-.care-list__item-button svg {
-  @media (min-width: $tablet-width) {
+.team {
+  padding: 60px 0;
+  text-align: center;
+  background-color: $black;
+}
 
+.team__title {
+  margin: 0 0 30px;
+}
+
+.team__description {
+  margin: 0 0 100px;
+}
+
+.employee-comment {
+  margin: 0;
+  background-color: $lightBlack;
+  padding: 2px 11px 16px;
+}
+
+.employee-comment__slider {
+  margin: -66px auto 25px;
+}
+
+.employee-slider {
+  position: relative;
+  max-width: 174px;
+}
+
+.employee-slider__img {
+  display: flex;
+  justify-content: center;
+}
+
+.employee-slider__button {
+  @extend .pets-slider__button;
+
+  &--right {
+    @extend .pets-slider__button--right
   }
+
+  &--left {
+    @extend .pets-slider__button--left
+  }
+}
+
+.employee-comment__author {
+  margin: 0 0 10px;
+
+  font-weight: 500;
+  font-size: 18px;
+  line-height: normal;
+  color: $lightBrown;
+  font-style: normal;
+}
+
+.employee-comment__position {
+  margin: 0 0 20px;
+
+  font-weight: normal;
+  color: $lightBrown;
+}
+
+.employee-comment__text {
+  margin: 0 0 25px;
+}
+
+.employee-comment__social-list {
+  justify-content: center;
 }
