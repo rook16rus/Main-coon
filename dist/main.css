@@ -1,0 +1,119 @@
+/*!*************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/css/style.scss ***!
+  \*************************************************************************************************************/
+@font-face {
+  font-family: "Yeseva One";
+  font-weight: normal;
+  src: url(f307f0e0d0b95f3e4ced.ttf);
+}
+@font-face {
+  font-family: "Roboto";
+  font-weight: 300;
+  src: url(8be2d1487420548b3b8d.ttf);
+}
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400;
+  src: url(a8d6ac03c7b96b7acb62.ttf);
+}
+@font-face {
+  font-family: "Roboto";
+  font-weight: 500;
+  src: url(7429a63c09f79a1760b0.ttf);
+}
+@font-face {
+  font-family: "Roboto";
+  font-weight: 700;
+  src: url(75371f53f06181df75f1.ttf);
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #fff;
+  background-color: #1F1C1D;
+}
+
+.container {
+  width: 290px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute;
+}
+
+.button {
+  display: inline-block;
+  border: 1px solid #A07B50;
+  padding: 15px 18px 16px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: normal;
+  text-decoration: none;
+}
+
+.section-title {
+  margin: 0;
+  font-family: "Yeseva One", "Georgia", serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: normal;
+  text-align: center;
+}
+
+.header {
+  text-align: center;
+  padding: 27px 0 256px;
+  background-color: #181617;
+}
+
+.logo {
+  display: inline-block;
+}
+
+.header__logo {
+  margin: 0 0 57px;
+}
+
+.header__city {
+  margin: 0 0 20px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #A07B50;
+}
+
+.main-title {
+  margin: 0 0 30px;
+  font-family: "Yeseva One", "Georgia", serif;
+  font-size: 36px;
+  line-height: normal;
+}
+
+.header__description {
+  margin: 0 0 40px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #A07B50;
+}
+
+.header__button-more {
+  margin-bottom: 20px;
+}
+
+.header__cat-photo {
+  display: block;
+  position: absolute;
+  right: 0;
+}
