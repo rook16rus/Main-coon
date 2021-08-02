@@ -1003,10 +1003,18 @@ body {
   @media (min-width: $tablet-width) {
     padding: 135px 0 85px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding: 73px 0 90px;
+  }
 }
 
 .faq__title {
   margin: 0 0 30px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .faq__description {
@@ -1016,6 +1024,10 @@ body {
   @media (min-width: $tablet-width) {
     margin-bottom: 58px;
     max-width: 450px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 32px ;
   }
 }
 
@@ -1032,6 +1044,10 @@ body {
 
   @media (min-width: $tablet-width) {
     margin: 0 27px 25px 131px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 127px 37px 264px;
   }
 }
 
@@ -1060,6 +1076,15 @@ body {
       color: #A07B50;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    min-height: 110px;
+
+    &::before {
+      font-size: 70px;
+      left: -100px;
+    }
+  }
 }
 
 .question-block__question {
@@ -1068,16 +1093,22 @@ body {
   margin: 0;
 
   font-weight: 500;
+  color: #DDD0C3;
 
   @media (min-width: $tablet-width) {
     align-self: center;
     padding: 18px 70px 15px 29px;
     font-size: 16px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 43px;
+  }
 }
 
 .question-block__button {
   width: 43px;
+  flex-shrink: 0;
   background: transparent url("../images/plus.svg") no-repeat center;
   border: none;
   border-left: 1px solid #544332;
@@ -1091,6 +1122,10 @@ body {
   @media (min-width: $tablet-width) {
     width: 72px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 104px;
+  }
 }
 
 .answer-block {
@@ -1099,6 +1134,10 @@ body {
 
   @media (min-width: $tablet-width) {
     padding: 26px 142px 27px 29px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 35px 203px 35px 43px;
   }
 }
 
