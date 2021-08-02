@@ -4,6 +4,7 @@
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 
   font-family: "Roboto", "Arial", sans-serif;
   font-weight: 300;
@@ -998,6 +999,10 @@ body {
 .faq {
   padding: 60px 0;
   text-align: center;
+  
+  @media (min-width: $tablet-width) {
+    padding: 135px 0 85px;
+  }
 }
 
 .faq__title {
@@ -1007,30 +1012,68 @@ body {
 .faq__description {
   margin: 0 auto 40px;
   max-width: 185px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 58px;
+    max-width: 450px;
+  }
 }
 
 .faq-list {
   list-style: none;
   margin: 0 0 -30px;
   padding: 0;
+  counter-reset: faq;
 }
 
 .faq-list__item {
   margin-bottom: 30px;
   text-align: left;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 27px 25px 131px;
+  }
 }
 
 .question-block {
   display: flex;
   border: 1px solid #544332;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    counter-increment: faq;
+
+    min-height: 76px;
+
+    &::before {
+      content: "0" counter(faq);
+
+      position: absolute;
+      left: -81px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      font-family: inherit;
+      font-weight: 700;
+      font-size: 50px;
+      line-height: normal;
+      color: #A07B50;
+    }
+  }
 }
 
 .question-block__question {
-  flex: 1;
+  flex-grow: 1;
   padding: 15px 10px 15px 15px;
   margin: 0;
 
   font-weight: 500;
+
+  @media (min-width: $tablet-width) {
+    align-self: center;
+    padding: 18px 70px 15px 29px;
+    font-size: 16px;
+  }
 }
 
 .question-block__button {
@@ -1044,11 +1087,19 @@ body {
     background-color: $lightBrown;
     background-image: url(../images/minus.svg);
   }
+
+  @media (min-width: $tablet-width) {
+    width: 72px;
+  }
 }
 
 .answer-block {
   border: 1px solid #544332;
   padding: 10px 25px 10px 15px;
+
+  @media (min-width: $tablet-width) {
+    padding: 26px 142px 27px 29px;
+  }
 }
 
 .answer-block__answer {
@@ -1057,5 +1108,9 @@ body {
 
   &:last-of-type {
     margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
   }
 }
