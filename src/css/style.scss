@@ -1156,6 +1156,10 @@ body {
 
 .reviews {
   padding: 0 0 60px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 87px;
+  }
 }
 
 .reviews__title {
@@ -1175,6 +1179,12 @@ body {
   background-color: $black;
 
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    max-width: 578px;
+    margin: 0 auto;
+    padding-top: 148px;
+  }
 }
 
 .review-slider {
@@ -1184,6 +1194,10 @@ body {
   transform: translateX(-50%);
 
   width: 100%;
+
+  @media (min-width: $tablet-width) {
+    top: -95px;
+  }
 }
 
 .review-slider__button {
@@ -1191,10 +1205,36 @@ body {
 
   &--right {
     @extend .pets-slider__button--right;
+    background: url("../images/arrow.svg") no-repeat center;
+    width: 8px;
   }
 
   &--left {
     @extend .pets-slider__button--left;
+    background: url("../images/arrow.svg") no-repeat center;
+    width: 8px;
+
+
+  }
+  @media (min-width: $tablet-width) {
+    bottom: 58px;
+    top: auto;
+
+    &--right {
+      background: url("../images/tablet-arrow.svg") no-repeat center;
+      width: 59px;
+      height: 16px;
+      right: 43px;
+      transform: rotate(180deg);
+    }
+
+    &--left {
+      background: url("../images/tablet-arrow.svg") no-repeat center;
+      width: 59px;
+      height: 16px;
+      left: 51px;
+      transform: none;
+    }
   }
 }
 
@@ -1206,10 +1246,19 @@ body {
 
   display: inline-block;
   margin: 0 0 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+  }
 }
 
 .review__text {
   margin: 0 0 20px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 407px;
+    margin: 0 auto 35px;
+  }
 }
 
 .meta-row {
@@ -1240,6 +1289,7 @@ body {
 }
 
 .meta-row time {
+  font-weight: normal;
   font-size: 12px;
   color: $lightBrown;
 }
