@@ -1329,3 +1329,33 @@ body {
   font-size: 12px;
   color: $lightBrown;
 }
+
+.footer {
+  padding: 40px 0;
+  background-color: #151313;
+  text-align: center;
+}
+
+.footer__address {
+  margin: 0 0 10px;
+  font-weight: normal;
+  color: #D6CCC2;
+}
+
+.footer__phone {
+  display: inline-block;
+  margin: 0 0 20px;
+  font-weight: normal;
+  color: #FDF2E6;
+}
+
+.footer__social-list {
+  justify-content: center;
+  align-items: center;
+  margin-right: -20px;
+  margin-bottom: 25px;
+}
+
+.footer__social-list .social-list__item {
+  margin-right: 20px;
+}
