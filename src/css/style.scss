@@ -15,19 +15,17 @@ body {
 }
 
 .container {
-  width: 290px;
   padding: 0 15px;
   margin: 0 auto;
   position: relative;
-  
+
   @media (min-width: $tablet-width) {
     padding: 0 29px;
-    width: 710px;
   }
 
   @media (min-width: $desktop-width) {
     padding: 0 60px;
-    width: 1184px;
+    max-width: 1184px;
   }
 }
 
@@ -66,7 +64,7 @@ body {
   font-size: 28px;
   line-height: normal;
   text-align: center;
-  
+
   @media (min-width: $tablet-width) {
     font-size: 36px;
   }
@@ -74,13 +72,9 @@ body {
 
 .section-description {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 1em;
   line-height: 1.4;
   color: #A07B50;
-  
-  @media (min-width: $tablet-width) {
-    font-size: 16px;
-  }
 }
 
 .header {
@@ -89,8 +83,10 @@ body {
   padding: 27px 0 256px;
   background-color: $black;
   overflow: hidden;
+  font-size: 0.875rem;
 
   @media (min-width: $tablet-width) {
+    font-size: 1rem;
     text-align: left;
     padding: 28px 0 25px;
   }
@@ -102,6 +98,11 @@ body {
 
 .header__inner {
   position: relative;
+
+  @media (min-width: 920px) {
+    padding-left: 9.62%;
+  }
+
   @media (min-width: $desktop-width) {
     padding-left: 111px;
   }
@@ -127,12 +128,12 @@ body {
 .header__city {
   margin: 0 0 20px;
 
+  font-size: 1em;
   font-weight: 400;
   line-height: 1.5;
   color: #A07B50;
 
   @media (min-width: $tablet-width) {
-    font-size: 16px;
     margin-bottom: 18px;
   }
 }
@@ -141,12 +142,12 @@ body {
   margin: 0 0 25px;
 
   font-family: "Yeseva One", "Georgia", serif;
-  font-size: 36px;
+  font-size: 2.57em;
   line-height: normal;
 
 
   @media (min-width: $tablet-width) {
-    font-size: 52px;
+    font-size: 3.25em;
     margin-bottom: 22px;
   }
 }
@@ -157,7 +158,7 @@ body {
   @media (min-width: $tablet-width) {
     margin-bottom: 57px;
   }
-  
+
   @media (min-width: $desktop-width) {
     margin-bottom: 50px;
   }
@@ -167,7 +168,7 @@ body {
   margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
-    font-size: 14px;
+    font-size: 0.875em;
     margin-bottom: 57px;
   }
 
@@ -181,9 +182,16 @@ body {
 
   position: absolute;
   right: 0;
+  left: 0;
+
+  @media (max-width: 290px) {
+    right: auto;
+  }
 
   @media (min-width: $tablet-width) {
     top: 62px;
+    right: 0;
+    left: auto;
   }
 
   @media (min-width: $desktop-width) {
@@ -199,7 +207,7 @@ body {
 
   display: flex;
 
-  }
+}
 
 .header__social-list {
   display: none;
@@ -224,7 +232,7 @@ body {
       top: -109px;
       left: 5px;
       background-color: #fff;
-    opacity: 0.6;
+      opacity: 0.6;
     }
   }
 }
@@ -242,7 +250,7 @@ body {
 .pets {
   padding: 60px 0;
   text-align: center;
-  
+
   @media (min-width: $tablet-width) {
     padding: 100px 0 91px;
   }
@@ -334,6 +342,7 @@ body {
     margin-right: 34px;
     margin-bottom: 19px;
   }
+
   &--bg {
     position: absolute;
     top: 50%;
@@ -408,7 +417,7 @@ body {
 .breed-features {
   padding: 0 0 60px;
   text-align: center;
-  
+
   @media (min-width: $tablet-width) {
     padding: 0 0 73px;
   }
@@ -473,7 +482,7 @@ body {
     margin-top: 5px;
 
     line-height: inherit;
-    
+
     @media (min-width: $desktop-width) {
       width: 15px;
       height: 15px;
@@ -597,7 +606,7 @@ body {
   padding: 60px 0;
   text-align: center;
   background-color: $black;
-  
+
   @media (min-width: $tablet-width) {
     padding: 84px 0 100px;
   }
@@ -652,7 +661,7 @@ body {
   margin-bottom: 30px;
   box-sizing: border-box;
   background-color: $lightBlack;
-  
+
   &:hover .features-list__inner {
     background-color: $lightBrown;
   }
@@ -712,7 +721,7 @@ body {
   padding: 60px 0;
   background: url("../images/cat-care.jpg") no-repeat center;
   background-size: cover;
-  
+
   @media (min-width: $tablet-width) {
     padding: 90px 0 105px;
   }
@@ -1001,7 +1010,7 @@ body {
 .faq {
   padding: 60px 0;
   text-align: center;
-  
+
   @media (min-width: $tablet-width) {
     padding: 135px 0 85px;
   }
@@ -1029,7 +1038,7 @@ body {
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 32px ;
+    margin-bottom: 32px;
   }
 }
 
@@ -1243,6 +1252,7 @@ body {
 
 
   }
+
   @media (min-width: $tablet-width) {
     bottom: 58px;
     top: auto;
