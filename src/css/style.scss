@@ -640,9 +640,11 @@ body {
 .features {
   padding: 60px 0;
   text-align: center;
+  font-size: 0.875rem;
   background-color: $black;
 
   @media (min-width: $tablet-width) {
+    font-size: 1rem;
     padding: 84px 0 100px;
   }
 }
@@ -690,12 +692,14 @@ body {
 
 .features-list__item {
   display: flex;
-
+  width: 100%;
+  max-width: 360px;
   min-height: 248px;
+  margin: 0 auto 30px;
   padding: 15px;
-  margin-bottom: 30px;
   box-sizing: border-box;
   background-color: $lightBlack;
+  font-size: 1em;
 
   &:hover .features-list__inner {
     background-color: $lightBrown;
@@ -726,12 +730,9 @@ body {
   }
 
   @media (min-width: $tablet-width) {
-    max-width: 360px;
     min-height: 306px;
     padding: 17px 20px;
     margin: 0 auto 42px;
-
-    font-size: 16px;
     line-height: 1.6;
   }
 
@@ -754,10 +755,12 @@ body {
 
 .cat-care {
   padding: 60px 0;
+  font-size: 0.875rem;
   background: url("../images/cat-care.jpg") no-repeat center;
   background-size: cover;
 
   @media (min-width: $tablet-width) {
+    font-size: 1rem;
     padding: 90px 0 105px;
   }
 
@@ -792,9 +795,11 @@ body {
 
 .care-list__item {
   display: flex;
-
-  margin-bottom: 30px;
+  width: 100%;
+  max-width: 558px;
+  margin: 0 auto 30px;
   background-color: rgba(0, 0, 0, 0.3);
+  font-size: 0.875rem;
 
   @media (min-width: $tablet-width) {
     max-width: 558px;
@@ -819,9 +824,13 @@ body {
   margin: 0 0 15px;
 
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1.28em;
   line-height: normal;
   color: $lightBrown;
+
+  @media (min-width: $tablet-width) {
+    font-size: 1.57em;
+  }
 }
 
 .care-list__item-text {
