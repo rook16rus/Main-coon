@@ -1216,9 +1216,11 @@ body {
 
 .reviews {
   padding: 0 0 60px;
+  font-size: 0.875rem;
 
   @media (min-width: $tablet-width) {
     padding-bottom: 87px;
+    font-size: 1rem;
   }
 
   @media (min-width: $desktop-width) {
@@ -1242,8 +1244,11 @@ body {
 
 .review {
   position: relative;
+  width: 100%;
+  max-width: 460px;
   padding: 118px 31px 40px;
-  margin: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
   background-color: $black;
 
   text-align: center;
@@ -1331,19 +1336,20 @@ body {
 .review__author {
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 1.28em;
   line-height: normal;
 
   display: inline-block;
   margin: 0 0 20px;
 
   @media (min-width: $tablet-width) {
-    font-size: 24px;
+    font-size: 1.5em;
   }
 }
 
 .review__text {
   margin: 0 0 20px;
+  font-size: 0.875rem;
 
   @media (min-width: $tablet-width) {
     max-width: 407px;
@@ -1387,7 +1393,7 @@ body {
 
 .meta-row time {
   font-weight: normal;
-  font-size: 12px;
+  font-size: 0.75rem;
   color: $lightBrown;
 }
 
@@ -1407,7 +1413,7 @@ body {
     justify-content: space-between;
     align-items: center;
 
-    max-width: 669px;
+    width: 94.22%;
     margin: 0 auto;
   }
 
