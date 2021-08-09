@@ -851,10 +851,12 @@ body {
 
 .team {
   padding: 60px 0;
+  font-size: 0.875rem;
   text-align: center;
   background-color: $black;
 
   @media (min-width: $tablet-width) {
+    font-size: 1rem;
     padding: 85px 0 215px;
   }
 
@@ -880,8 +882,13 @@ body {
   }
 }
 
+.team__comment {
+  width: 100%;
+  max-width: 360px;
+}
+
 .employee-comment {
-  margin: 0;
+  margin: 0 auto;
   background-color: $lightBlack;
   padding: 2px 11px 16px;
   position: relative;
@@ -919,7 +926,6 @@ body {
     margin: 0 112px 0 auto;
   }
 }
-
 
 .employee-slider {
   position: relative;
@@ -995,13 +1001,13 @@ body {
   margin: 0 0 10px;
 
   font-weight: 500;
-  font-size: 18px;
+  font-size: 1.28em;
   line-height: normal;
   color: $lightBrown;
   font-style: normal;
 
   @media (min-width: $tablet-width) {
-    font-size: 24px;
+    font-size: 1.5em;
   }
 }
 
@@ -1011,18 +1017,11 @@ body {
   font-weight: normal;
   color: $lightBrown;
 
-  @media (min-width: $tablet-width) {
-    font-size: 16px;
-  }
 }
 
 .employee-comment__text {
   margin: 0 0 25px;
   opacity: 0.72;
-
-  @media (min-width: $tablet-width) {
-    font-size: 16px;
-  }
 }
 
 .employee-comment__social-list {
@@ -1053,9 +1052,11 @@ body {
 
 .faq {
   padding: 60px 0;
+  font-size: 0.875rem;
   text-align: center;
 
   @media (min-width: $tablet-width) {
+    font-size: 1rem;
     padding: 135px 0 85px;
   }
 
@@ -1094,11 +1095,15 @@ body {
 }
 
 .faq-list__item {
-  margin-bottom: 30px;
+  width: 100%;
+  max-width: 553px;
+  margin: 0 auto;
   text-align: left;
 
   @media (min-width: $tablet-width) {
-    margin: 0 27px 25px 131px;
+    width: 77.89%;
+    max-width: 793px;
+    margin: 0 3.8% 3.52% 18.45%;
   }
 
   @media (min-width: $desktop-width) {
@@ -1153,7 +1158,6 @@ body {
   @media (min-width: $tablet-width) {
     align-self: center;
     padding: 18px 70px 15px 29px;
-    font-size: 16px;
   }
 
   @media (min-width: $desktop-width) {
@@ -1207,10 +1211,6 @@ body {
 
   &:last-of-type {
     margin-bottom: 0;
-  }
-
-  @media (min-width: $tablet-width) {
-    font-size: 16px;
   }
 }
 
