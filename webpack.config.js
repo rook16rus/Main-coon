@@ -1,5 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlMinimizerPlugin = require("html-minimizer-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 const { extendDefaultPlugins } = require("svgo");
 const path = require('path');
@@ -42,7 +44,8 @@ module.exports = {
                     ],
                 ],
             },
-        })
+        }),
+
     ],
     module: {
         rules: [
@@ -69,5 +72,12 @@ module.exports = {
     },
     devServer: {
         contentBase: './dist'
-    }
+    },
+    optimization: {
+        minimize: true,
+        minimizer: [
+            new HtmlMinimizerPlugin(),
+            new CssMinimizerPlugin(),
+        ],
+    },
 };
