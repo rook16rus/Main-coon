@@ -50,6 +50,13 @@ body {
   font-size: 12px;
   line-height: normal;
   text-decoration: none;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: #A07B50;
+    border-color: #fff;
+    transition: 0.3s;
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 14px;
@@ -59,6 +66,16 @@ body {
 
 .arrow {
   stroke: $lightBrown;
+  transition: 0.3s;
+
+  &:hover {
+    stroke: rgba(255, 255, 255, 0.8);
+    transition: 0.3s;
+  }
+
+  &:active {
+    stroke: rgba(255, 255, 255, 1);
+  }
 
   &--white {
     stroke: white;
@@ -251,10 +268,17 @@ body {
   align-items: center;
   margin-right: 11px;
   cursor: pointer;
+  transition: 0.2s;
 
   svg {
     fill: #fff;
   }
+
+  &:hover {
+    opacity: 0.3;
+    transition: 0.2s;
+  }
+
 }
 
 .header__social-list .social-list__item {
@@ -332,6 +356,7 @@ body {
   line-height: normal;
   opacity: 0.2;
   cursor: pointer;
+  transition: 0.3s;
 
   @media (min-width: $tablet-width) {
     font-size: 1.125em;
@@ -339,6 +364,7 @@ body {
 
   &:hover {
     opacity: 1;
+    transition: 0.3s;
   }
 
   &:last-child {
@@ -450,6 +476,7 @@ body {
 
   background: none;
   border: 0;
+  cursor: pointer;
 
   @media (min-width: $desktop-width) {
     display: none;
@@ -753,10 +780,13 @@ body {
 
   &:hover .features-list__inner {
     background-color: $lightBrown;
+    transition: 0.3s;
   }
 
   & .features-list__inner {
     position: relative;
+    transition: 0.3s;
+
     &:before {
       content: '';
       position: absolute;
@@ -892,8 +922,20 @@ body {
   width: 100%;
   max-width: 558px;
   margin: 0 auto 30px;
+  border: 1px solid $lightBrown;
   background-color: rgba(0, 0, 0, 0.3);
   font-size: 0.875rem;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: #151313;
+    transition: 0.3s;
+  }
+
+  &:hover .care-list__item-button {
+    background-color: #151313;
+    transition: 0.3s;
+  }
 
   @media (min-width: $tablet-width) {
     max-width: 558px;
@@ -903,6 +945,7 @@ body {
 
   @media (min-width: $desktop-width) {
     margin: 0 41px 43px 0;
+    background-color: transparent;
   }
 }
 
@@ -935,8 +978,10 @@ body {
   width: 46px;
   flex-shrink: 0;
   border: 0;
+  border-left: 1px solid $lightBrown;
   outline: none;
   background-color: $lightBrown;
+  transition: 0.3s;
 
   svg {
     width: 10px;
@@ -1242,6 +1287,17 @@ body {
 .question-block {
   display: flex;
   border: 1px solid #544332;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: #151313;
+    transition: 0.3s;
+  }
+
+  &:hover .question-block__button{
+    background-color: #151313;
+    transition: 0.3s;
+  }
 
   @media (min-width: $tablet-width) {
     position: relative;
@@ -1300,6 +1356,7 @@ body {
   border: none;
   border-left: 1px solid #544332;
   cursor: pointer;
+  transition: 0.3s;
 
   & svg {
     width: 16px;
@@ -1508,6 +1565,19 @@ body {
   margin-bottom: 0;
   border: 1px solid rgba(160, 123, 80, 0.27);
   box-sizing: border-box;
+  transition: 0.3s;
+
+  &:hover {
+    border-color: #fff;
+    transition: fill 0.3s;
+    opacity: 1;
+
+    svg {
+      fill: #fff;
+      transition: fill 0.3s;
+      opacity: 1;
+    }
+  }
 
   &:last-child {
     margin-right: 0;
@@ -1604,6 +1674,14 @@ body {
 
 .footer__social-list .social-list__item {
   margin-right: 20px;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:hover svg{
+    fill: #fff;
+  }
 
   svg {
     fill: $lightBrown;

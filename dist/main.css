@@ -326,7 +326,11 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-right: 11px
+    margin-right: 11px;
+
+    &:hover {
+
+     }
 }
 
 .social-list__item svg {
