@@ -57,6 +57,14 @@ body {
   }
 }
 
+.arrow {
+  stroke: $lightBrown;
+
+  &--white {
+    stroke: white;
+  }
+}
+
 .section-title {
   margin: 0;
 
@@ -239,12 +247,38 @@ body {
 }
 
 .social-list__item {
+  display: flex;
+  align-items: center;
   margin-right: 11px;
+  cursor: pointer;
+
+  svg {
+    fill: #fff;
+  }
 }
 
 .header__social-list .social-list__item {
   @media (min-width: $desktop-width) {
     margin-bottom: 15px;
+  }
+
+  a {
+    display: flex;
+  }
+
+  &--vk svg {
+    width: 13px;
+    height: 8px;
+  }
+
+  &--tw svg {
+    width: 15px;
+    height: 10px;
+  }
+
+  &--fb svg {
+    width: 5px;
+    height: 11px;
   }
 }
 
@@ -389,6 +423,9 @@ body {
   }
 }
 
+.tw-icon {
+  color: red;
+}
 
 .cat-gallery {
   @media (min-width: $desktop-width) {
@@ -433,6 +470,14 @@ body {
 
 .pets-slider__button svg {
   display: block;
+  width: 10px;
+  height: 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 15px;
+    height: 29px;
+    stroke-width: 2px;
+  }
 }
 
 .breed-features {
@@ -710,28 +755,72 @@ body {
     background-color: $lightBrown;
   }
 
-  &--med .features-list__inner {
-    background: url("../images/features-1.svg") no-repeat center top 40px;
-
-    @media (min-width: $tablet-width) {
-      background-size: 97px;
+  & .features-list__inner {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
     }
+  }
+
+
+  &--med .features-list__inner {
+    &:before {
+      width: 80px;
+      height: 88px;
+      top: 40px;
+      background: url("../images/features-sprite.svg#features-1") no-repeat;
+
+      @media (min-width: $tablet-width) {
+        width: 98px;
+        height: 109px;
+        background-size: 98px auto;
+      }
+    }
+  }
+
+  &--med:hover .features-list__inner:before {
+    background-image: url(../images/features-sprite.svg#features-1-light);
   }
 
   &--cons .features-list__inner {
-    background: url("../images/features-2.svg") no-repeat center top 48px;
+    &:before {
+      width: 80px;
+      height: 71px;
+      top: 48px;
+      background: url("../images/features-sprite.svg#features-2") no-repeat;
 
-    @media (min-width: $tablet-width) {
-      background-size: 107px;
+      @media (min-width: $tablet-width) {
+        width: 107px;
+        height: 97px;
+        background-size: 107px auto;
+      }
     }
   }
 
-  &--feed .features-list__inner {
-    background: url("../images/features-3.svg") no-repeat center top 40px;
+  &--cons:hover .features-list__inner:before {
+    background-image: url(../images/features-sprite.svg#features-2-light);
+  }
 
-    @media (min-width: $tablet-width) {
-      background-size: 70px;
+  &--feed .features-list__inner {
+    &:before {
+      width: 57px;
+      height: 88px;
+      top: 40px;
+      background: url("../images/features-sprite.svg#features-3") no-repeat;
+
+      @media (min-width: $tablet-width) {
+        width: 70px;
+        height: 110px;
+        background-size: 70px auto;
+      }
     }
+  }
+
+  &--feed:hover .features-list__inner:before {
+    background-image: url(../images/features-sprite.svg#features-3-light);
   }
 
   @media (min-width: $tablet-width) {
@@ -848,6 +937,11 @@ body {
   border: 0;
   outline: none;
   background-color: $lightBrown;
+
+  svg {
+    width: 10px;
+    height: 20px;
+  }
 
   @media (min-width: $tablet-width) {
     width: 60px;
@@ -971,6 +1065,12 @@ body {
 .employee-slider__button {
   @extend .pets-slider__button;
 
+  & svg {
+    @media (min-width: $tablet-width) {
+      stroke-width: 1;
+    }
+  }
+
   &--right {
     @extend .pets-slider__button--right;
 
@@ -1030,29 +1130,52 @@ body {
 }
 
 .employee-comment__social-list {
+  position: relative;
+  z-index: 2;
   justify-content: center;
   align-items: center;
 
   @media (min-width: $tablet-width) {
     justify-content: flex-start;
+  }
 
-    .social-list__item {
-      &--fb svg {
-        width: 8px;
-        height: auto;
+  .social-list__item {
+    a {
+      display: flex;
+      padding: 3px;
+    }
+
+    &--fb svg {
+      width: 5px;
+      height: 12px;
+      
+      @media (min-width: $tablet-width) {
+        width: 6px;
+        height: 14px;
       }
+    }
 
-      &--tw svg {
+    &--tw svg {
+      width: 16px;
+      height: 12px;
+
+      @media (min-width: $tablet-width) {
         width: 20px;
-        height: auto;
+        height: 14px;
       }
+    }
 
-      &--vk svg {
+    &--vk svg {
+      width: 18px;
+      height: 10px;
+
+      @media (min-width: $tablet-width) {
         width: 21px;
-        height: auto;
+        height: 12px;
       }
     }
   }
+
 }
 
 .faq {
@@ -1173,18 +1296,28 @@ body {
 .question-block__button {
   width: 43px;
   flex-shrink: 0;
-  background: transparent url("../images/plus.svg") no-repeat center;
+  background: transparent url("../images/plus_sprite.svg") no-repeat center;
   border: none;
   border-left: 1px solid #544332;
   cursor: pointer;
 
+  & svg {
+    width: 16px;
+    height: 16px;
+    stroke: #A07B50;
+
+    @media (min-width: $tablet-width) {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
   &--active {
     background-color: $lightBrown;
-    background-image: url(../images/minus.svg);
+    background-image: url(../images/minus_sprite.svg);
 
-    & img {
-      display: block;
-      width: 100%;
+    & svg {
+      stroke: #fff;
     }
   }
 
@@ -1298,38 +1431,32 @@ body {
 .review-slider__button {
   @extend .pets-slider__button;
 
+
+
   &--right {
     @extend .pets-slider__button--right;
-    background: url("../images/arrow.svg") no-repeat center;
-    width: 8px;
   }
 
   &--left {
     @extend .pets-slider__button--left;
-    background: url("../images/arrow.svg") no-repeat center;
-    width: 8px;
-
-
   }
 
   @media (min-width: $tablet-width) {
+    display: inline-block;
     bottom: 58px;
     top: auto;
 
     &--right {
-      background: url("../images/tablet-arrow.svg") no-repeat center;
-      width: 59px;
-      height: 16px;
       right: 43px;
-      transform: rotate(180deg);
     }
 
     &--left {
-      background: url("../images/tablet-arrow.svg") no-repeat center;
-      width: 59px;
-      height: 16px;
       left: 51px;
-      transform: none;
+      transform: rotate(180deg);
+    }
+
+    & svg {
+      stroke-width: 1px;
     }
   }
 
@@ -1384,6 +1511,20 @@ body {
 
   &:last-child {
     margin-right: 0;
+  }
+
+  svg {
+    fill: $lightBrown;
+  }
+
+  &--tw svg {
+    width: 16px;
+    height: 12px;
+  }
+
+  &--vk svg {
+    width: 18px;
+    height: 10px;
   }
 }
 
@@ -1463,6 +1604,25 @@ body {
 
 .footer__social-list .social-list__item {
   margin-right: 20px;
+
+  svg {
+    fill: $lightBrown;
+  }
+
+  &--fb svg {
+    width: 7px;
+    height: 16px;
+  }
+
+  &--tw svg {
+    width: 22px;
+    height: 16px;
+  }
+
+  &--vk svg {
+    width: 25px;
+    height: 14px;
+  }
 
   @media (min-width: $desktop-width) {
     margin-right: 10px;

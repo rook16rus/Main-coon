@@ -25,6 +25,8 @@
     "sass": "^1.36.0",
     "sass-loader": "^12.1.0",
     "style-loader": "^3.2.1",
+    "svg-sprite-loader": "^6.0.9",
+    "svgo-loader": "^3.0.0",
     "webpack": "^5.46.0",
     "webpack-dev-server": "^3.11.2"
   },

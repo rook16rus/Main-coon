@@ -3,6 +3,7 @@ const HtmlMinimizerPlugin = require("html-minimizer-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 const { extendDefaultPlugins } = require("svgo");
 const path = require('path');
 
@@ -19,29 +20,13 @@ module.exports = {
             template: "./src/index.html"
         }),
         new MiniCssExtractPlugin(),
+        new SpriteLoaderPlugin(),
         new ImageMinimizerPlugin({
             minimizerOptions: {
                 plugins: [
                     ["gifsicle", { interlaced: true, optimizationLevel: 2 }],
-                    ["mozjpeg", { progressive: true, quality: 80 }],
+                    ["mozjpeg", { progressive: true, quality: 85 }],
                     ["pngquant", { quality: [0.7, 1] }],
-                    [
-                        "svgo",
-                        {
-                            plugins: extendDefaultPlugins([
-                                {
-                                    name: "removeViewBox",
-                                    active: false,
-                                },
-                                {
-                                    name: "addAttributesToSVGElement",
-                                    params: {
-                                        attributes: [{ xmlns: "http://www.w3.org/2000/svg" }],
-                                    },
-                                },
-                            ]),
-                        },
-                    ],
                 ],
             },
         }),
@@ -58,7 +43,15 @@ module.exports = {
                 use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
             },
             {
-                test: /\.(gif|png|jpe?g|svg)$/,
+                test: /\.svg$/i,
+                include: /.*_sprite\.svg/,
+                use: [
+                    'svg-sprite-loader',
+                    'svgo-loader'
+                ]
+            },
+            {
+                test: /\.(gif|png|jpe?g)$/,
                 type: "asset/resource",
                 generator: {
                     filename: '[name][ext]',
