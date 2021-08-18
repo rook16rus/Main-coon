@@ -1,4 +1,4 @@
-/******/ (() => { // webpackBootstrap
+/******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
 /***/ 854:
@@ -1317,31 +1317,31 @@ return sprite$1;
 /******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
+/******/ 		__webpack_require__.n = function(module) {
 /******/ 			var getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
+/******/ 				function() { return module['default']; } :
+/******/ 				function() { return module; };
 /******/ 			__webpack_require__.d(getter, { a: getter });
 /******/ 			return getter;
 /******/ 		};
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/define property getters */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 		__webpack_require__.d = function(exports, definition) {
 /******/ 			for(var key in definition) {
 /******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
 /******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
 /******/ 				}
 /******/ 			}
 /******/ 		};
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		__webpack_require__.g = (function() {
 /******/ 			if (typeof globalThis === 'object') return globalThis;
 /******/ 			try {
@@ -1350,17 +1350,17 @@ return sprite$1;
 /******/ 				if (typeof window === 'object') return window;
 /******/ 			}
 /******/ 		})();
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
-/******/ 	})();
+/******/ 	!function() {
+/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
+/******/ 	}();
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
-(() => {
+!function() {
 "use strict";
 
 // EXTERNAL MODULE: ./node_modules/svg-baker-runtime/browser-symbol.js
@@ -1379,7 +1379,7 @@ var symbol = new (browser_symbol_default())({
   "content": "<symbol xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 11\" id=\"tw-icon_sprite\"><path class=\"tw\" d=\"M13.376 4.826c.847-.071 1.422-.464 1.643-.996-.306.191-1.254.4-1.778.201a6.596 6.596 0 0 0-.083-.352c-.4-1.494-1.766-2.698-3.198-2.552.116-.048.233-.092.35-.132.158-.058 1.083-.211.937-.544-.123-.293-1.253.221-1.465.288.28-.107.745-.292.795-.621-.43.06-.853.267-1.18.569A.832.832 0 0 0 9.625.23c-1.148.748-1.818 2.254-2.36 3.716-.427-.421-.805-.753-1.143-.937-.95-.519-2.087-1.06-3.87-1.736-.055.602.291 1.401 1.29 1.933-.216-.03-.612.037-.929.114.13.689.55 1.257 1.69 1.531-.521.035-.79.156-1.034.416.237.48.816 1.043 1.857.928-1.158.508-.472 1.45.47 1.31A3.946 3.946 0 0 1 0 7.656c3.798 5.274 12.055 3.12 13.285-1.961.922.008 1.464-.326 1.8-.693-.531.091-1.301-.003-1.71-.177z\" /></symbol>"
 });
 var result = browser_sprite_build_default().add(symbol);
-/* harmony default export */ const tw_icon_sprite = ((/* unused pure expression or super */ null && (symbol)));
+/* harmony default export */ var tw_icon_sprite = ((/* unused pure expression or super */ null && (symbol)));
 ;// CONCATENATED MODULE: ./src/images/vk-icon_sprite.svg
 
 
@@ -1390,7 +1390,7 @@ var vk_icon_sprite_symbol = new (browser_symbol_default())({
   "content": "<symbol xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 13 9\" id=\"vk-icon_sprite\"><path d=\"M12.884 7.409c-.035-.064-.251-.58-1.291-1.642-1.089-1.11-.943-.93.369-2.852.799-1.17 1.118-1.884 1.018-2.19-.095-.29-.683-.214-.683-.214l-1.953.013s-.145-.022-.253.049c-.104.07-.172.23-.172.23s-.31.906-.722 1.676c-.87 1.624-1.22 1.71-1.361 1.61-.331-.236-.248-.946-.248-1.45 0-1.574.217-2.23-.423-2.4-.213-.057-.37-.094-.913-.1C5.555.13 4.964.14 4.63.32c-.222.12-.394.387-.29.402.13.018.423.086.578.319.2.299.193.972.193.972s.116 1.854-.269 2.084c-.264.158-.625-.164-1.401-1.639-.398-.755-.698-1.59-.698-1.59S2.685.714 2.582.631C2.457.53 2.28.498 2.28.498L.424.51S.144.52.042.652c-.09.119-.007.364-.007.364s1.455 3.74 3.1 5.625c1.511 1.728 3.226 1.615 3.226 1.615h.777s.235-.029.354-.17c.11-.131.106-.376.106-.376s-.015-1.146.47-1.315c.476-.166 1.089 1.108 1.738 1.598.49.37.864.29.864.29l1.736-.027s.909-.062.478-.847z\" /></symbol>"
 });
 var vk_icon_sprite_result = browser_sprite_build_default().add(vk_icon_sprite_symbol);
-/* harmony default export */ const vk_icon_sprite = ((/* unused pure expression or super */ null && (vk_icon_sprite_symbol)));
+/* harmony default export */ var vk_icon_sprite = ((/* unused pure expression or super */ null && (vk_icon_sprite_symbol)));
 ;// CONCATENATED MODULE: ./src/images/fb-icon_sprite.svg
 
 
@@ -1401,7 +1401,7 @@ var fb_icon_sprite_symbol = new (browser_symbol_default())({
   "content": "<symbol xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 6 12\" id=\"fb-icon_sprite\"><path d=\"M1.099 2.268v1.529H0v1.87h1.099v5.555h2.258V5.667h1.515s.142-.897.21-1.877H3.365V2.512c0-.191.246-.448.49-.448h1.23V.118H3.412C1.043.118 1.1 1.988 1.1 2.268z\" /></symbol>"
 });
 var fb_icon_sprite_result = browser_sprite_build_default().add(fb_icon_sprite_symbol);
-/* harmony default export */ const fb_icon_sprite = ((/* unused pure expression or super */ null && (fb_icon_sprite_symbol)));
+/* harmony default export */ var fb_icon_sprite = ((/* unused pure expression or super */ null && (fb_icon_sprite_symbol)));
 ;// CONCATENATED MODULE: ./src/images/plus_sprite.svg
 
 
@@ -1412,7 +1412,7 @@ var plus_sprite_symbol = new (browser_symbol_default())({
   "content": "<symbol xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" id=\"plus_sprite\"><path d=\"M8 0v16M0 8h16\" /></symbol>"
 });
 var plus_sprite_result = browser_sprite_build_default().add(plus_sprite_symbol);
-/* harmony default export */ const plus_sprite = ((/* unused pure expression or super */ null && (plus_sprite_symbol)));
+/* harmony default export */ var plus_sprite = ((/* unused pure expression or super */ null && (plus_sprite_symbol)));
 ;// CONCATENATED MODULE: ./src/images/arrow_sprite.svg
 
 
@@ -1423,7 +1423,7 @@ var arrow_sprite_symbol = new (browser_symbol_default())({
   "content": "<symbol viewBox=\"0 0 10 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" id=\"arrow_sprite\"><path d=\"m1 1 8 9.333L1 19\" /></symbol>"
 });
 var arrow_sprite_result = browser_sprite_build_default().add(arrow_sprite_symbol);
-/* harmony default export */ const arrow_sprite = ((/* unused pure expression or super */ null && (arrow_sprite_symbol)));
+/* harmony default export */ var arrow_sprite = ((/* unused pure expression or super */ null && (arrow_sprite_symbol)));
 ;// CONCATENATED MODULE: ./src/index.js
 
 
@@ -1431,7 +1431,6 @@ var arrow_sprite_result = browser_sprite_build_default().add(arrow_sprite_symbol
 
 
 
-})();
-
+}();
 /******/ })()
 ;
