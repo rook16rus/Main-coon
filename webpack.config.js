@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
+const ImageminWebpWebpackPlugin= require("imagemin-webp-webpack-plugin");
 const { extendDefaultPlugins } = require("svgo");
 const path = require('path');
 
@@ -21,6 +22,7 @@ module.exports = {
         }),
         new MiniCssExtractPlugin(),
         new SpriteLoaderPlugin(),
+        new ImageminWebpWebpackPlugin(),
         new ImageMinimizerPlugin({
             minimizerOptions: {
                 plugins: [
