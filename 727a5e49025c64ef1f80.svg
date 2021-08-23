@@ -1,0 +1,8 @@
+export default {
+      id: "minus_sprite-usage",
+      viewBox: "0 0 16 2",
+      url: __webpack_public_path__ + "C:\\Users\\kamal\\OneDrive\\Рабочий стол\\Макеты\\Adaptive Responsive\\main-coon\\src\\images\\minus_sprite.svg",
+      toString: function () {
+        return this.url;
+      }
+    }
