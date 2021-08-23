@@ -1,29 +1,44 @@
 @font-face {
   font-family: "Yeseva One";
-  font-weight: normal;
-  src: url("../fonts/Yeseva-One.ttf");
+  font-weight: 400;
+  font-display: swap;
+  src:
+       url("../fonts/Yeseva-One.woff2") format("woff2"),
+       url("../fonts/Yeseva-One.woff") format("woff");
 }
 
 @font-face {
   font-family: "Roboto";
   font-weight: 300;
-  src: url("../fonts/Roboto-Light.ttf");
+  font-display: swap;
+  src:
+       url("../fonts/Roboto-light.woff2") format("woff2"),
+       url("../fonts/Roboto-light.woff") format("woff");
 }
 
 @font-face {
   font-family: "Roboto";
   font-weight: 400;
-  src: url("../fonts/Roboto-Regular.ttf");
+  font-display: swap;
+  src:
+       url("../fonts/Roboto-regular.woff2") format("woff2"),
+       url("../fonts/Roboto-regular.woff") format("woff");
 }
 
 @font-face {
   font-family: "Roboto";
   font-weight: 500;
-  src: url("../fonts/Roboto-Medium.ttf");
+  font-display: swap;
+  src:
+       url("../fonts/Roboto-medium.woff2") format("woff2"),
+       url("../fonts/Roboto-medium.woff") format("woff");
 }
 
 @font-face {
   font-family: "Roboto";
   font-weight: 700;
-  src: url("../fonts/Roboto-Bold.ttf");
+  font-display: swap;
+  src:
+       url("../fonts/Roboto-bold.woff2") format("woff2"),
+       url("../fonts/Roboto-bold.woff") format("woff");
 }
