@@ -8,6 +8,10 @@
     "last 2 versions"
   ],
   "dependencies": {
+    "animate.css": "^4.1.1",
+    "cloud9carousel": "^2.2.0",
+    "jquery": "^3.6.0",
+    "owl.carousel": "^2.3.4",
     "webpack-cli": "^4.7.2"
   },
   "devDependencies": {
@@ -36,6 +40,7 @@
     "style-loader": "^3.2.1",
     "svg-sprite-loader": "^6.0.9",
     "svgo-loader": "^3.0.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^5.46.0",
     "webpack-dev-server": "^3.11.2"
   },

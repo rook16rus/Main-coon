@@ -3,10 +3,12 @@ const HtmlMinimizerPlugin = require("html-minimizer-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 const ImageminWebpWebpackPlugin= require("imagemin-webp-webpack-plugin");
-const { extendDefaultPlugins } = require("svgo");
+
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
     entry: {
@@ -31,6 +33,12 @@ module.exports = {
                     ["pngquant", { quality: [0.7, 1] }],
                 ],
             },
+        }),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+            'window.$': 'jquery',
+            'window.jQuery': 'jquery',
         }),
 
     ],
@@ -73,6 +81,7 @@ module.exports = {
         minimizer: [
             new HtmlMinimizerPlugin(),
             new CssMinimizerPlugin(),
+            new UglifyJsPlugin(),
         ],
     },
 };

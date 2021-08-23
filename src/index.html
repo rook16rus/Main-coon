@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Main-coon</title></head>
+    <title>Main-coon</title>
+</head>
 <body>
 <header class="header">
     <div class="container">
@@ -37,8 +38,8 @@
         <picture class="header__cat-photo">
             <source media="(min-width: 1366px)" type="image/webp" srcset="images/cat-header-desktop.webp">
             <source media="(min-width: 1366px)" srcset="images/cat-header-desktop.png">
-            <source media="(min-width: 768px)" type="image/webp" srcset="images/cat-header-tablet.webp, images/cat-header-desktop.webp 2x">
-            <source media="(min-width: 768px)" srcset="images/cat-header-tablet.png, images/cat-header-desktop.png 2x">
+            <source media="(min-width: 768px)" type="image/webp" srcset="images/cat-header-tablet.webp">
+            <source media="(min-width: 768px)" srcset="images/cat-header-tablet.png">
             <source type="image/webp" srcset="images/cat-header.webp">
             <img src="images/cat-header.png" alt="Фото с котиком"></picture>
     </div>
@@ -54,8 +55,8 @@
                 <li class="pets-list__item">Котята</li>
             </ul>
             <div class="pets__pets-slider pets-slider">
-                <div class="cat-gallery">
-                    <picture class="pets-slider__photo pets-slider__photo--bg pets-slider__photo--right">
+                <div class="cat-gallery pets-carousel">
+                    <picture class="pets-slider__photo pets-slider__photo--bg pets-slider__photo--right cloud9-item">
                         <source media="(min-width: 1366px)" srcset="images/cat-catalog-2-desktop.webp">
                         <source media="(min-width: 1366px)" srcset="images/cat-catalog-2-desktop.jpg">
                         <source srcset="images/cat-catalog-2.webp">
@@ -68,8 +69,8 @@
                     <picture class="pets-slider__photo pets-slider__photo--active">
                         <source media="(min-width: 1366px)" srcset="images/cat-catalog-desktop.webp">
                         <source media="(min-width: 1366px)" srcset="images/cat-catalog-desktop.jpg">
-                        <source media="(min-width: 768px)" srcset="images/cat-catalog-tablet.webp, images/cat-catalog-desktop.webp 2x">
-                        <source media="(min-width: 768px)" srcset="images/cat-catalog-tablet.png, images/cat-catalog-desktop.jpg 2x">
+                        <source media="(min-width: 768px)" srcset="images/cat-catalog-tablet.webp">
+                        <source media="(min-width: 768px)" srcset="images/cat-catalog-tablet.png">
                         <source srcset="images/cat-catalog.webp">
                         <img src="images/cat-catalog.jpg" alt="Фото кота"></picture>
                 </div>
@@ -95,8 +96,8 @@
                 <picture class="breed-features__img">
                     <source media="(min-width: 1366px)" srcset="images/cat-features-desktop.webp">
                     <source media="(min-width: 1366px)" srcset="images/cat-features-desktop.png">
-                    <source media="(min-width: 768px)" srcset="images/cat-features-tablet.webp, images/cat-features-desktop.webp 2x">
-                    <source media="(min-width: 768px)" srcset="images/cat-features-tablet.png, images/cat-features-desktop.png 2x">
+                    <source media="(min-width: 768px)" srcset="images/cat-features-tablet.webp">
+                    <source media="(min-width: 768px)" srcset="images/cat-features-tablet.png">
                     <source srcset="images/cat-features.webp">
                     <img src="images/cat-features.png" alt="" aria-labelledby="breedFeatures"></picture>
                 <ul class="breed-features__list breed-features-list">
@@ -174,48 +175,111 @@
         <div class="container"><h2 class="team__title section-title">Наша команда</h2>
             <p class="team__description section-description"> Все сотрудники нашего питомника дипломированые специалисты
                 в области фелинологии и ветеринарии </p>
-            <blockquote class="team__comment employee-comment">
-                <div class="employee-comment__slider employee-slider">
-                    <picture class="employee-slider__img">
-                        <source media="(min-width: 1366px)" srcset="images/team-desktop.webp">
-                        <source media="(min-width: 1366px)" srcset="images/team-desktop.jpg">
-                        <source media="(min-width: 768px)" srcset="images/team-tablet.webp, images/team-desktop.webp 2x">
-                        <source media="(min-width: 768px)" srcset="images/team-tablet.jpg, images/team-desktop.jpg 2x">
-                        <source srcset="images/team.webp">
-                        <img src="images/team.jpg" alt="Фото сотрудника"></picture>
-                    <button class="employee-slider__button employee-slider__button--left">
-                        <svg class="arrow">
-                            <use xlink:href="#arrow_sprite"></use>
-                        </svg>
-                    </button>
-                    <button class="employee-slider__button employee-slider__button--right">
-                        <svg class="arrow">
-                            <use xlink:href="#arrow_sprite"></use>
-                        </svg>
-                    </button>
+            <div class="owl-carousel team-carousel">
+                <div>
+                    <blockquote class="team__comment employee-comment">
+                        <div class="employee-comment__slider employee-slider">
+                            <picture class="employee-slider__img">
+                                <source media="(min-width: 1366px)" srcset="images/team-desktop.webp">
+                                <source media="(min-width: 1366px)" srcset="images/team-desktop.jpg">
+                                <source media="(min-width: 768px)" srcset="images/team-tablet.webp">
+                                <source media="(min-width: 768px)" srcset="images/team-tablet.jpg">
+                                <source srcset="images/team.webp">
+                                <img src="images/team.jpg" alt="Фото сотрудника"></picture>
+                        </div>
+                        <cite class="employee-comment__author">Серёжа Попов</cite>
+                        <p class="employee-comment__position">Основатель питомника</p>
+                        <p class="employee-comment__text"> Наш питомник занимается разведением Мейн-Кунов на протяжении 15 лет.
+                            <br> Мы в ответе за каждого приобретенного вами питомца </p>
+                        <ul class="employee-comment__social-list social-list">
+                            <li class="social-list__item social-list__item--fb"><a href="#">
+                                <svg>
+                                    <use xlink:href="#fb-icon_sprite"></use>
+                                </svg>
+                            </a></li>
+                            <li class="social-list__item social-list__item--tw"><a href="#">
+                                <svg>
+                                    <use xlink:href="#tw-icon_sprite"></use>
+                                </svg>
+                            </a></li>
+                            <li class="social-list__item social-list__item--vk"><a href="#">
+                                <svg>
+                                    <use xlink:href="#vk-icon_sprite"></use>
+                                </svg>
+                            </a></li>
+                        </ul>
+                    </blockquote>
                 </div>
-                <cite class="employee-comment__author">Серёжа Попов</cite>
-                <p class="employee-comment__position">Основатель питомника</p>
-                <p class="employee-comment__text"> Наш питомник занимается разведением Мейн-Кунов на протяжении 15 лет.
-                    <br> Мы в ответе за каждого приобретенного вами питомца </p>
-                <ul class="employee-comment__social-list social-list">
-                    <li class="social-list__item social-list__item--fb"><a href="#">
-                        <svg>
-                            <use xlink:href="#fb-icon_sprite"></use>
-                        </svg>
-                    </a></li>
-                    <li class="social-list__item social-list__item--tw"><a href="#">
-                        <svg>
-                            <use xlink:href="#tw-icon_sprite"></use>
-                        </svg>
-                    </a></li>
-                    <li class="social-list__item social-list__item--vk"><a href="#">
-                        <svg>
-                            <use xlink:href="#vk-icon_sprite"></use>
-                        </svg>
-                    </a></li>
-                </ul>
-            </blockquote>
+                <div>
+                    <blockquote class="team__comment employee-comment">
+                        <div class="employee-comment__slider employee-slider">
+                            <picture class="employee-slider__img">
+                                <source media="(min-width: 1366px)" srcset="images/team-desktop.webp">
+                                <source media="(min-width: 1366px)" srcset="images/team-desktop.jpg">
+                                <source media="(min-width: 768px)" srcset="images/team-tablet.webp, images/team-desktop.webp 2x">
+                                <source media="(min-width: 768px)" srcset="images/team-tablet.jpg, images/team-desktop.jpg 2x">
+                                <source srcset="images/team.webp">
+                                <img src="images/team.jpg" alt="Фото сотрудника"></picture>
+                        </div>
+                        <cite class="employee-comment__author">Серёжа Попов</cite>
+                        <p class="employee-comment__position">Основатель питомника</p>
+                        <p class="employee-comment__text"> Наш питомник занимается разведением Мейн-Кунов на протяжении 15 лет.
+                            <br> Мы в ответе за каждого приобретенного вами питомца </p>
+                        <ul class="employee-comment__social-list social-list">
+                            <li class="social-list__item social-list__item--fb"><a href="#">
+                                <svg>
+                                    <use xlink:href="#fb-icon_sprite"></use>
+                                </svg>
+                            </a></li>
+                            <li class="social-list__item social-list__item--tw"><a href="#">
+                                <svg>
+                                    <use xlink:href="#tw-icon_sprite"></use>
+                                </svg>
+                            </a></li>
+                            <li class="social-list__item social-list__item--vk"><a href="#">
+                                <svg>
+                                    <use xlink:href="#vk-icon_sprite"></use>
+                                </svg>
+                            </a></li>
+                        </ul>
+                    </blockquote>
+                </div>
+                <div>
+                    <blockquote class="team__comment employee-comment">
+                        <div class="employee-comment__slider employee-slider">
+                            <picture class="employee-slider__img">
+                                <source media="(min-width: 1366px)" srcset="images/team-desktop.webp">
+                                <source media="(min-width: 1366px)" srcset="images/team-desktop.jpg">
+                                <source media="(min-width: 768px)" srcset="images/team-tablet.webp">
+                                <source media="(min-width: 768px)" srcset="images/team-tablet.jpg">
+                                <source srcset="images/team.webp">
+                                <img src="images/team.jpg" alt="Фото сотрудника"></picture>
+
+                        </div>
+                        <cite class="employee-comment__author">Серёжа Попов</cite>
+                        <p class="employee-comment__position">Основатель питомника</p>
+                        <p class="employee-comment__text"> Наш питомник занимается разведением Мейн-Кунов на протяжении 15 лет.
+                            <br> Мы в ответе за каждого приобретенного вами питомца </p>
+                        <ul class="employee-comment__social-list social-list">
+                            <li class="social-list__item social-list__item--fb"><a href="#">
+                                <svg>
+                                    <use xlink:href="#fb-icon_sprite"></use>
+                                </svg>
+                            </a></li>
+                            <li class="social-list__item social-list__item--tw"><a href="#">
+                                <svg>
+                                    <use xlink:href="#tw-icon_sprite"></use>
+                                </svg>
+                            </a></li>
+                            <li class="social-list__item social-list__item--vk"><a href="#">
+                                <svg>
+                                    <use xlink:href="#vk-icon_sprite"></use>
+                                </svg>
+                            </a></li>
+                        </ul>
+                    </blockquote>
+                </div>
+            </div>
         </div>
     </section>
     <section class="faq">
@@ -227,9 +291,12 @@
                         котенка из питомника?</p>
                         <button class="question-block__button question-block__button--active">
                             <span class="visually-hidden">Показать ответ</span>
-                            <svg>
-                                <use xlink:href="#plus_sprite"></use>
-                            </svg>
+                            <span class="circle-plus closed">
+                                <span class="circle">
+                                    <span class="horizontal"></span>
+                                    <span class="vertical"></span>
+                                </span>
+                            </span>
                         </button>
                     </div>
                     <div class="answer-block"><p class="answer-block__answer"> Есть важная причина, почему котенка стоит
@@ -244,43 +311,70 @@
                     <div class="question-block"><p class="question-block__question">Как зарезервировать котенка?</p>
                         <button class="question-block__button">
                             <span class="visually-hidden">Показать ответ</span>
-                            <svg>
-                                <use xlink:href="#plus_sprite"></use>
-                            </svg>
+                            <span class="circle-plus closed">
+                                <span class="circle">
+                                    <span class="horizontal"></span>
+                                    <span class="vertical"></span>
+                                </span>
+                            </span>
                         </button>
                     </div>
-                    <div class="answer-block visually-hidden"></div>
+                    <div class="answer-block"><p class="answer-block__answer"> Есть важная причина, почему котенка стоит
+                        забирать домой только после трех месяцев, — это вакцинация. Первые прививки животному делают в
+                        возрасте 8 недель. Ревакцинация проводится через 3–4 недели. То есть котенок, покидающий дом
+                        позднее 12 недель, максимально защищен от различных вирусов и инфекций. </p>
+                        <p class="answer-block__answer"> Так что, чтобы в дома появился психически и физически здоровый
+                            котенок, игривый, жизнерадостный, самостоятельный и воспитанный, не спешите забирать его от
+                            кошки-мамы раньше трех месяцев. </p></div>
                 </li>
                 <li class="faq-list__item">
                     <div class="question-block"><p class="question-block__question">Можно ли купить кота, если я живу в
                         другом городе?</p>
                         <button class="question-block__button">
                             <span class="visually-hidden">Показать ответ</span>
-                            <svg>
-                                <use xlink:href="#plus_sprite"></use>
-                            </svg>
+                            <span class="circle-plus closed">
+                                <span class="circle">
+                                    <span class="horizontal"></span>
+                                    <span class="vertical"></span>
+                                </span>
+                            </span>
                         </button>
                     </div>
-                    <div class="answer-block visually-hidden"></div>
+                    <div class="answer-block"><p class="answer-block__answer"> Есть важная причина, почему котенка стоит
+                        забирать домой только после трех месяцев, — это вакцинация. Первые прививки животному делают в
+                        возрасте 8 недель. Ревакцинация проводится через 3–4 недели. То есть котенок, покидающий дом
+                        позднее 12 недель, максимально защищен от различных вирусов и инфекций. </p>
+                        <p class="answer-block__answer"> Так что, чтобы в дома появился психически и физически здоровый
+                            котенок, игривый, жизнерадостный, самостоятельный и воспитанный, не спешите забирать его от
+                            кошки-мамы раньше трех месяцев. </p></div>
                 </li>
                 <li class="faq-list__item">
                     <div class="question-block"><p class="question-block__question">Как подготовить дом к приему нового
                         питомца? </p>
                         <button class="question-block__button">
                             <span class="visually-hidden">Показать ответ</span>
-                            <svg>
-                                <use xlink:href="#plus_sprite"></use>
-                            </svg>
+                            <span class="circle-plus closed">
+                                <span class="circle">
+                                    <span class="horizontal"></span>
+                                    <span class="vertical"></span>
+                                </span>
+                            </span>
                         </button>
                     </div>
-                    <div class="answer-block visually-hidden"></div>
+                    <div class="answer-block"><p class="answer-block__answer"> Есть важная причина, почему котенка стоит
+                        забирать домой только после трех месяцев, — это вакцинация. Первые прививки животному делают в
+                        возрасте 8 недель. Ревакцинация проводится через 3–4 недели. То есть котенок, покидающий дом
+                        позднее 12 недель, максимально защищен от различных вирусов и инфекций. </p>
+                        <p class="answer-block__answer"> Так что, чтобы в дома появился психически и физически здоровый
+                            котенок, игривый, жизнерадостный, самостоятельный и воспитанный, не спешите забирать его от
+                            кошки-мамы раньше трех месяцев. </p></div>
                 </li>
             </ul>
         </div>
     </section>
     <section class="reviews">
         <div class="container"><h2 class="reviews__title section-title">Отзывы</h2>
-            <ul class="reviews-list">
+            <ul class="reviews-list owl-carousel review-carousel">
                 <li class="reviews-list__item">
                     <blockquote class="review">
                         <div class="review__slider review-slider">
@@ -291,16 +385,78 @@
                                 <source media="(min-width: 768px)" srcset="images/review-tablet.jpg, images/review-desktop.jpg 2x">
                                 <source srcset="images/review.webp">
                                 <img src="images/review.jpg" alt="Фото сотрудника"></picture>
-                            <button class="review-slider__button review-slider__button--left">
-                                <svg class="arrow">
-                                    <use xlink:href="#arrow_sprite"></use>
-                                </svg>
-                            </button>
-                            <button class="review-slider__button review-slider__button--right">
-                                <svg class="arrow">
-                                    <use xlink:href="#arrow_sprite"></use>
-                                </svg>
-                            </button>
+                        </div>
+                        <cite class="review__author">Серёжа Попов</cite>
+                        <p class="review__text"> Я выражаю огромную благодарность вашему питомнику. Мой Феликс
+                            невероятно умен и воспитан. Огромным плюсом питомника является возможность консультироваться
+                            в любое время </p>
+                        <div class="meta-row review__meta-row">
+                            <div class="meta-column">
+                                <time datetime="2018-05-24">24 мая 2018</time>
+                            </div>
+                            <div class="meta-column">
+                                <ul class="social-list social-list--review">
+                                    <li class="social-list__item social-list__item--tw">
+                                        <svg>
+                                            <use xlink:href="#tw-icon_sprite"></use>
+                                        </svg>
+                                    </li>
+                                    <li class="social-list__item social-list__item--vk">
+                                        <svg>
+                                            <use xlink:href="#vk-icon_sprite"></use>
+                                        </svg>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </blockquote>
+                </li>
+                <li class="reviews-list__item">
+                    <blockquote class="review">
+                        <div class="review__slider review-slider">
+                            <picture class="review-slider__img">
+                                <source media="(min-width: 1366px)" srcset="images/review-desktop.webp">
+                                <source media="(min-width: 1366px)" srcset="images/review-desktop.jpg">
+                                <source media="(min-width: 768px)" srcset="images/review-tablet.webp, images/review-desktop.webp 2x">
+                                <source media="(min-width: 768px)" srcset="images/review-tablet.jpg, images/review-desktop.jpg 2x">
+                                <source srcset="images/review.webp">
+                                <img src="images/review.jpg" alt="Фото сотрудника"></picture>
+                        </div>
+                        <cite class="review__author">Серёжа Попов</cite>
+                        <p class="review__text"> Я выражаю огромную благодарность вашему питомнику. Мой Феликс
+                            невероятно умен и воспитан. Огромным плюсом питомника является возможность консультироваться
+                            в любое время </p>
+                        <div class="meta-row review__meta-row">
+                            <div class="meta-column">
+                                <time datetime="2018-05-24">24 мая 2018</time>
+                            </div>
+                            <div class="meta-column">
+                                <ul class="social-list social-list--review">
+                                    <li class="social-list__item social-list__item--tw">
+                                        <svg>
+                                            <use xlink:href="#tw-icon_sprite"></use>
+                                        </svg>
+                                    </li>
+                                    <li class="social-list__item social-list__item--vk">
+                                        <svg>
+                                            <use xlink:href="#vk-icon_sprite"></use>
+                                        </svg>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </blockquote>
+                </li>
+                <li class="reviews-list__item">
+                    <blockquote class="review">
+                        <div class="review__slider review-slider">
+                            <picture class="review-slider__img">
+                                <source media="(min-width: 1366px)" srcset="images/review-desktop.webp">
+                                <source media="(min-width: 1366px)" srcset="images/review-desktop.jpg">
+                                <source media="(min-width: 768px)" srcset="images/review-tablet.webp, images/review-desktop.webp 2x">
+                                <source media="(min-width: 768px)" srcset="images/review-tablet.jpg, images/review-desktop.jpg 2x">
+                                <source srcset="images/review.webp">
+                                <img src="images/review.jpg" alt="Фото сотрудника"></picture>
                         </div>
                         <cite class="review__author">Серёжа Попов</cite>
                         <p class="review__text"> Я выражаю огромную благодарность вашему питомнику. Мой Феликс

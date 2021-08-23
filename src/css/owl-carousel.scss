@@ -1,0 +1,61 @@
+.owl-carousel .owl-stage-outer {
+  overflow: visible;
+}
+
+.owl-carousel .owl-item img {
+  width: auto;
+  display: inline-block;
+}
+
+.owl-carousel .owl-nav button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+
+  padding: 0;
+
+  background: none;
+  border: 0;
+  cursor: pointer;
+
+  &.owl-prev {
+    left: 0;
+    transform: rotate(180deg);
+
+    @media (max-width: $mobile-width-only) {
+      top: -11px;
+      bottom: auto;
+    }
+  }
+
+  &.owl-next {
+    right: 0;
+
+    @media (max-width: $mobile-width-only) {
+      top: -11px;
+      bottom: auto;
+    }
+  }
+
+  & svg {
+    display: block;
+    width: 10px;
+    height: 20px;
+
+    @media (min-width: $tablet-width) {
+      width: 15px;
+      height: 29px;
+      stroke-width: 2px;
+    }
+  }
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+  transform: rotate(180deg);
+}
+
+.cloud9 {
+  overflow: visible !important;
+  min-height: 550px;
+}
