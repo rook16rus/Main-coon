@@ -8,9 +8,9 @@ npm run build
 ```
 Для запуска в режиме development
 ```shell
-npm run build
+npm run dev
 ```
 Для запуска c помощью dev-server
 ```shell
-npm run build
+npm start
 ```
